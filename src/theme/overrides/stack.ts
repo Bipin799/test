@@ -1,8 +1,13 @@
-import type { Components } from "@mui/material/styles";
+// theme/overrides/stack.ts
+import type { Components, Theme } from "@mui/material/styles";
 
-export const MuiStack: Components["MuiStack"] = {
-  defaultProps: {
-    px: 3,
-    py: 2.5,
-  },
-};
+export default function MuiStack(
+  _theme: Theme
+): Components["MuiStack"] {
+  return {
+    defaultProps: {
+      px: 3,
+      py: 2.5,
+    },
+  };
+}

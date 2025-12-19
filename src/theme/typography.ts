@@ -1,7 +1,4 @@
-// theme/typography.ts
-import type { TypographyOptions } from "@mui/material/styles/createTypography";
-
-const typography: TypographyOptions = {
+const typography = {
   fontFamily: `"Inter", "Roboto", "Helvetica", "Arial", sans-serif`,
 
   h1: {
@@ -33,7 +30,7 @@ const typography: TypographyOptions = {
 
   button: {
     fontSize: "14px",
-    fontWeight: 600,
+    fontWeight: 500,
     textTransform: "none",
   },
 

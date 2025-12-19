@@ -1,6 +1,5 @@
-import type { PaletteOptions } from "@mui/material/styles";
 
-export const palette: PaletteOptions = {
+export const palette = {
   grey: {
     0: "#FFFFFF",
     50: "#F8FAFC",

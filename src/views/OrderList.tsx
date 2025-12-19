@@ -13,6 +13,8 @@ import {
   IconButton,
   TablePagination,
   Divider,
+  Container,
+  Chip,
 } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
@@ -21,12 +23,14 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import TableSortLabel from "@mui/material/TableSortLabel";
 
-import StatusChip from "../components/StatusChip";
+// import StatusChip from "../components/StatusChip";
 import SearchInput from "../components/SearchInput";
 import { rows } from "../utils/rows";
+import { statusChipColorMap } from "../constants/statusChip";
 
 export default function OrderList() {
   return (
+    <Container maxWidth="lg">
     <Card>
       <CardHeader title="Order List" />
         <Divider />
@@ -50,7 +54,7 @@ export default function OrderList() {
               <TableCell padding="checkbox">
                 <Checkbox />
               </TableCell>
-              <TableCell>
+              <TableCell >
                 <TableSortLabel active direction="desc">
                   ID
                 </TableSortLabel>
@@ -85,10 +89,8 @@ export default function OrderList() {
                 </TableSortLabel>
                 </TableCell>
 
-                <TableCell align="right">
-                <TableSortLabel >
+                <TableCell align="center">
                     Action
-                </TableSortLabel>
                 </TableCell>
             </TableRow>
           </TableHead>
@@ -99,13 +101,13 @@ export default function OrderList() {
                 <TableCell padding="checkbox">
                   <Checkbox />
                 </TableCell>
-                <TableCell>{row.id}</TableCell>
+                <TableCell variant="id">{row.id}</TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.branch}</TableCell>
                 <TableCell>{row.payment}</TableCell>
                 <TableCell>{row.date}</TableCell>
                 <TableCell>
-                  <StatusChip label={row.status} />
+                  <Chip label={row.status}  color={statusChipColorMap[row.status]}/>
                 </TableCell>
                 <TableCell align="center">
                   <IconButton color="primary">
@@ -128,7 +130,10 @@ export default function OrderList() {
         rowsPerPage={10}
         onPageChange={() => {}}
         onRowsPerPageChange={() => {}}
+        labelRowsPerPage="Items per page"
       />
     </Card>
+    </Container>
+  
   );
 }

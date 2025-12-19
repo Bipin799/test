@@ -1,16 +1,23 @@
-import type { Components } from "@mui/material/styles";
+// theme/overrides/iconButton.ts
+import type { Components,
+  //  Theme
+  } from "@mui/material/styles";
 
-export const MuiIconButton: Components["MuiIconButton"] = {
-  styleOverrides: {
-    root: ({ theme }) => ({
-      "&.outlined": {
-        borderRadius: 8,
-        padding: 6,
+export default function MuiIconButton(
+  // theme: Theme
+): Components["MuiIconButton"] {
+  return {
+    styleOverrides: {
+      root: {
+        // "&.outlined": {
+        //   borderRadius: 8,
+        //   padding: 6,
 
-        "&:hover": {
-          backgroundColor: theme.palette.action.hover,
-        },
+          // "&:hover": {
+          //   backgroundColor: theme.palette.action.hover,
+          // },
+        // },
       },
-    }),
-  },
-};
+    },
+  };
+}

@@ -26,7 +26,7 @@ export default function StatusChip({ label }: StatusChipProps) {
         fontSize: "12px",
         bgcolor: status.bg,
         color: status.color,
-        borderRadius: "6px",
+        borderRadius: "50px",
         px: 1,
       }}
     />

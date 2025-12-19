@@ -1,9 +1,14 @@
-import type { Components } from "@mui/material/styles";
+// theme/overrides/typography.ts
+import type { Components, Theme } from "@mui/material/styles";
 
-export const MuiTypography: Components["MuiTypography"] = {
-  styleOverrides: {
-    h4: ({ theme }) => ({
-      color: theme.palette.grey[900],
-    }),
-  },
-};
+export default function MuiTypography(
+  theme: Theme
+): Components["MuiTypography"] {
+  return {
+    styleOverrides: {
+      h4: {
+        color: theme.palette.grey[900],
+      },
+    },
+  };
+}

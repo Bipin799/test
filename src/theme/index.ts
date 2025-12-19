@@ -7,7 +7,8 @@ const theme = createTheme({
   spacing: 4,
   palette,
   typography,
-  components,
 });
+
+theme.components = components(theme);
 
 export default theme;

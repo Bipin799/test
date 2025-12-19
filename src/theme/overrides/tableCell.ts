@@ -1,29 +1,35 @@
-import type { Components } from "@mui/material/styles";
+// theme/overrides/tableCell.ts
+import type { Components, Theme } from "@mui/material/styles";
 
-export const MuiTableCell: Components["MuiTableCell"] = {
-    
-  styleOverrides: {
-    root: ({ theme }) => ({
-      lineHeight: "20px",
-      color: "#364152",
-    }),
-
-    head: ({ theme }) => ({
-      fontWeight: 600,
-      fontSize: "14px",
-      lineHeight: "20px",
-      color: theme.palette.grey[900],
-    }),
-  },
-
-  variants: [
-    {
-      props: { variant: "id" as any },
-      style: ({ theme }) => ({
-        color: theme.palette.grey[900],
-        fontWeight: 600,
+export default function MuiTableCell(
+  theme: Theme
+): Components["MuiTableCell"] {
+  return {
+    styleOverrides: {
+      root: {
+        lineHeight: "20px",
         fontSize: "14px",
-      }),
+        color: theme.palette.grey[700],
+      },
+
+      head: {
+        fontWeight: 500,
+        fontSize: "14px",
+        lineHeight: "20px",
+        color: theme.palette.grey[900],
+      },
     },
-  ],
-};
+
+    variants: [
+      {
+        // custom variant
+        props: { variant: "id" as any },
+        style: {
+          color: theme.palette.grey[900],
+          fontWeight: 500,
+          fontSize: "14px",
+        },
+      },
+    ],
+  };
+}
