@@ -24,7 +24,7 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import TableSortLabel from "@mui/material/TableSortLabel";
 
 // import StatusChip from "../components/StatusChip";
-import SearchInput from "../../components/SearchInput";
+import SearchInput from "../../components/orders/SearchInput";
 import { rows } from "../../utils/rows";
 import { statusChipColorMap } from "../../constants/statusChip";
 import { useNavigate } from "react-router-dom";

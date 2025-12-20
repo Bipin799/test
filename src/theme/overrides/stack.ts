@@ -6,8 +6,8 @@ export default function MuiStack(
 ): Components["MuiStack"] {
   return {
     defaultProps: {
-      px: 3,
-      py: 2.5,
+      // px: 3,
+      // py: 2.5,
     },
   };
 }

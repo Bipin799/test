@@ -20,11 +20,11 @@ const typography = {
 
   body1: {
     fontSize: "14px",
-    fontWeight: 400,
+    fontWeight: 500,
   },
 
   body2: {
-    fontSize: "13px",
+    fontSize: "14px",
     fontWeight: 400,
   },
 
@@ -37,6 +37,7 @@ const typography = {
   caption: {
     fontSize: "12px",
   },
+
 };
 
 export default typography;

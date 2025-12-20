@@ -52,4 +52,11 @@ export const palette = {
     dark: "#E6AD00",
     darkest: "#C29614",
   },
+
+  text: {
+    primary: "#121926",
+    secondary: "#697586",
+    // disabled: "#98A2B3",
+  },
+
 };

@@ -2,12 +2,6 @@ import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { Container, Card, CardContent, Tabs, Tab, Typography } from "@mui/material";
 
-// import Details from "./Details";
-// import Invoice from "./Invoice";
-// import Status from "./Status";
-
-// import { rows } from "../../utils/rows";
-// import type { Order } from "../../types/order";
 import Details from "./detailtab";
 import Invoice from "./Invoicetab";
 import Status from "./statustab";
