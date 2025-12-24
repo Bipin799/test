@@ -1,16 +1,21 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Divider,
-  Stack,
-  Typography,
-} from "@mui/material";
+
+
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 import { palette } from "../../theme/palette";
 
+
 const ColorPage = () => {
+  const theme = useTheme();
+
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
       <Card >
@@ -19,7 +24,7 @@ const ColorPage = () => {
         />
         <Divider />
 
-        <CardContent> 
+        <CardContent>
           <Stack spacing={6}>
             {Object.entries(palette).map(([groupName, colors]) => {
               if (groupName === "text") return null;
@@ -43,7 +48,7 @@ const ColorPage = () => {
                           width: 199,
                         }}
                       >
-                 
+
                         <Box
                           sx={{
                             height: 116,
@@ -53,19 +58,19 @@ const ColorPage = () => {
                           }}
                         />
 
-                          <Stack
-                            direction="row"
-                            justifyContent="space-between"
-                            alignItems="center"
-                            p={1}
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          p={1}
                         >
-                            <Typography variant="h4" color="grey.500">
+                          <Typography variant="h4" color="grey.500">
                             {label}
-                            </Typography>
+                          </Typography>
 
-                            <Typography variant="h4" color="grey.500">
+                          <Typography variant="h4" color="grey.500">
                             {value}
-                            </Typography>
+                          </Typography>
                         </Stack>
 
                       </Stack>

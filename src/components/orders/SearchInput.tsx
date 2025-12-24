@@ -1,9 +1,9 @@
-import  {
-  TextField,
-  InputAdornment,
-} from "@mui/material";
-import type { TextFieldProps } from "@mui/material";
+import InputAdornment from "@mui/material/InputAdornment";
+import TextField from "@mui/material/TextField";
+import type { TextFieldProps } from "@mui/material/TextField";
+
 import SearchIcon from "@mui/icons-material/Search";
+
 
 type SearchInputProps = TextFieldProps & {
   placeholder?: string;
@@ -33,6 +33,8 @@ export default function SearchInput({
           height: 44,
           borderRadius: "12px",
           backgroundColor: "#F8FAFC",
+          color: "grey.500",
+          // fontSize: "16px",
           boxShadow: "0px 1px 2px rgba(10, 13, 18, 0.08)",
 
           "& fieldset": {
@@ -51,7 +53,7 @@ export default function SearchInput({
 
         "& .MuiOutlinedInput-input": {
           padding: "10px 12px",
-          fontSize: "14px",
+          fontSize: "16px",
           lineHeight: "20px",
         },
       }}

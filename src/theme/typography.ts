@@ -28,7 +28,7 @@ export const typography = {
 
   h4: {
     fontSize: "16px",
-    fontWeight: 600,
+    fontWeight: 500,
     lineHeight: "20px",
     color: palette.grey[900],
   },
@@ -76,10 +76,10 @@ export const typography = {
   },
 
   button: {
-    fontSize: "14px",
+    fontSize: "12px",
     fontWeight: 500,
-    lineHeight: "25px",
-    color: palette.grey[700],
+    lineHeight: "20px",
+    color: palette.grey[0],
   },
 
   caption: {

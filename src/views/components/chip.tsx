@@ -1,4 +1,12 @@
-import { Card, CardContent, CardHeader, Chip, Container, Divider, Stack, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import Chip from "@mui/material/Chip";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 
 const ChipPage = () =>{
     return(
@@ -12,21 +20,20 @@ const ChipPage = () =>{
                             <Typography variant="h6"> color </Typography>
 
                             <Stack direction="row" spacing={2} flexWrap="wrap">
-                            <Chip label="primary" color="primary" />
-                            <Chip label="warning" color="warning" />
-                            <Chip label="info" color="info" />
-                            <Chip label="success" color="success" />
-                            <Chip label="error" color="error" />
+                                <Chip label="primary" color="primary" />
+                                <Chip label="warning" color="warning" />
+                                <Chip label="info" color="info" />
+                                <Chip label="success" color="success" />
+                                <Chip label="error" color="error" />
                             </Stack>
                         </Stack>
-
 
                          <Stack spacing={2}>
                             <Typography variant="h6"> size </Typography>
 
                             <Stack direction="row" spacing={2} flexWrap="wrap">
-                            <Chip label="small" size="small"  color="primary"/>
-                            <Chip label="medium" size="medium" color="primary" />
+                                <Chip label="small" size="small"  color="primary"/>
+                                <Chip label="medium" size="medium" color="primary" />
                             </Stack>
                         </Stack>
 

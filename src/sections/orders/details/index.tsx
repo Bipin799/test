@@ -1,12 +1,20 @@
-import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
-import { Container, Card, CardContent, Tabs, Tab, Typography } from "@mui/material";
+import { Navigate, useParams } from "react-router-dom";
+
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Container from "@mui/material/Container";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
 
 import Details from "./detailtab";
 import Invoice from "./Invoicetab";
 import Status from "./statustab";
+
 import { rows } from "../../../utils/rows";
 import type { Order } from "../../../types/order";
+
 
 export default function OrderDetailsPage() {
   const { orderId } = useParams<{ orderId: string }>();

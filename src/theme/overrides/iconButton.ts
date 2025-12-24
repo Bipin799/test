@@ -1,22 +1,22 @@
 // theme/overrides/iconButton.ts
 import type { Components,
-  //  Theme
+   Theme
   } from "@mui/material/styles";
 
 export default function MuiIconButton(
-  // theme: Theme
+  theme: Theme
 ): Components["MuiIconButton"] {
   return {
     styleOverrides: {
       root: {
-        // "&.outlined": {
-        //   borderRadius: 8,
-        //   padding: 6,
+        "&.outlined": {
+          borderRadius: 8,
+          padding: 6,
 
-          // "&:hover": {
-          //   backgroundColor: theme.palette.action.hover,
-          // },
-        // },
+          "&:hover": {
+            backgroundColor: theme.palette.action.hover,
+          },
+        },
       },
     },
   };

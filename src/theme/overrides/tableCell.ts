@@ -19,18 +19,5 @@ export default function MuiTableCell(
         color: theme.palette.grey[900],
       },
     },
-
-    variants: [
-      {
-        // custom variant
-        props: { variant: "id" as any },
-        style: {
-          color: theme.palette.grey[900],
-          fontWeight: 500,
-          fontSize: "14px",
-          // lineHeight: "20px",
-        },
-      },
-    ],
   };
 }

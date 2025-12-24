@@ -1,4 +1,3 @@
-
 export const palette = {
   grey: {
     0: "#FFFFFF",

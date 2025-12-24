@@ -1,15 +1,15 @@
-import {
-  Stack,
-  Typography,
-  Divider,
-  Button,
-  Container,
-  Card,
-  CardHeader,
-  CardContent,
-  IconButton,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+
 
 const ButtonPage = () => {
   return (
