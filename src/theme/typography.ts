@@ -1,7 +1,7 @@
-// ====================== THEME - TYPOGRAPHY ====================== //
-
+// @project
 import { palette } from "./palette";
 
+// ---------------------------------  THEME - TYPOGRAPHY  ---------------------------------
 export const typography = {
   fontFamily: `"Roboto", sans-serif`,
 

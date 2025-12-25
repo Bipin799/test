@@ -1,19 +1,23 @@
+// @react
 import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+// @mui
 import Container from "@mui/material/Container";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import Typography from "@mui/material/Typography";
 
+// @project
+import MainCard from "../../../components/MainCard";
 import Details from "./detailtab";
 import Invoice from "./Invoicetab";
 import Status from "./statustab";
 
-import { rows } from "../../../utils/rows";
+// @types
 import type { Order } from "../../../types/order";
+
+// @utils
+import { rows } from "../../../utils/rows";
 
 
 export default function OrderDetailsPage() {
@@ -31,13 +35,7 @@ export default function OrderDetailsPage() {
   return (
     <>
     <Container maxWidth="lg">
-      <Card>
-        <CardContent>
-
-          <Typography variant="h5" fontWeight={600} mb={2}>
-            Order Details
-          </Typography>
-
+      <MainCard title = "Order Details">
           <Tabs
             value={tab}
             onChange={(_, value) => setTab(value)}
@@ -49,12 +47,11 @@ export default function OrderDetailsPage() {
           </Tabs>
 
           {/* Tab Content */}
-          {tab === 0 && <Details order={order} />}
+          {tab === 0 && <Details />}
           {tab === 1 && <Invoice />}
           {tab === 2 && <Status />}
 
-        </CardContent>
-      </Card>
+      </MainCard>
     </Container>
     </>
     

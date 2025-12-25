@@ -1,6 +1,6 @@
-// theme/overrides/chip.ts
 import type { Components, Theme } from "@mui/material/styles";
 
+// ---------------------------------  OVERRIDES - CHIP  ---------------------------------
 export default function MuiChip(
   theme: Theme
 ): Components["MuiChip"] {

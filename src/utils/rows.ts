@@ -1,3 +1,4 @@
+// @types
 import type { Order } from "../types/order";
 
 export const rows: Order[] = [

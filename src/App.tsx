@@ -1,17 +1,15 @@
 import './App.css'
-// import OrderList from './views/orders/List'
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./theme/index"; 
-import AppRoutes from './routes/main';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/main';
 
 function App() {
-
   return (
     <>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <OrderList /> */}
-      <AppRoutes />
+      <RouterProvider router={router} />
     </ThemeProvider>
     </>
   )

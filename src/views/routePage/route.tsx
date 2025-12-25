@@ -1,22 +1,22 @@
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Grid from "@mui/material/Grid";
-
+// @react
 import { useNavigate } from "react-router-dom";
 
+// @mui
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
+// @project
+import MainCard from "../../components/MainCard";
+        
 const routes = [
-  { label: "Button", path: "/button" },
-  { label: "Chip", path: "/chip" },
-  { label: "TextField", path: "/textfield" },
-  { label: "Color", path: "/color" },
-  { label: "Pagination", path: "/pagination" },
-  { label: "Checkbox", path: "/checkbox" },
-  { label: "Typography", path: "/typography" },
+    { label: "Button", path: "/component/button" },
+    { label: "Chip", path: "/component/chip" },
+    { label: "TextField", path: "/component/textfield" },
+    { label: "Color", path: "/component/color" },
+    { label: "Pagination", path: "/component/pagination" },
+    { label: "Checkbox", path: "/component/checkbox" },
+    { label: "Typography", path: "/component/typography" },
 ];
 
 const RoutePage = () => {
@@ -24,11 +24,8 @@ const RoutePage = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
-      <Card>
-        <CardHeader title="Component Showcase Dashboard" />
-        <Divider />
-
-        <CardContent>
+      <MainCard title="Component Showcase Dashboard">
+       
           <Grid container spacing={3}>
             {routes.map((item) => (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.path}>
@@ -43,8 +40,7 @@ const RoutePage = () => {
               </Grid>
             ))}
           </Grid>
-        </CardContent>
-      </Card>
+      </MainCard>
     </Container>
   );
 };

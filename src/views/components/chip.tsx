@@ -1,47 +1,43 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Chip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 
+// @project
+import MainCard from "../../components/MainCard";
 
-const ChipPage = () =>{
-    return(
-        <>
-            <Container maxWidth="lg" sx={{ py: 5 }}>
-                <Card>
-                    <CardHeader title="Chip Component Showcase" />
-                    <Divider />
-                    <CardContent>
-                         <Stack spacing={2} py={4}>
-                            <Typography variant="h6"> color </Typography>
+const ChipPage = () => {
+  return (
+    <>
+      <Container maxWidth="lg" sx={{ py: 5 }}>
+        <MainCard title="Chip Component Showcase">
+          <Grid container spacing={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <MainCard title="Color">
+                <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
+                  <Chip label="primary" color="primary" />
+                  <Chip label="warning" color="warning" />
+                  <Chip label="info" color="info" />
+                  <Chip label="success" color="success" />
+                  <Chip label="error" color="error" />
+                </Stack>
+              </MainCard>
+            </Grid>
 
-                            <Stack direction="row" spacing={2} flexWrap="wrap">
-                                <Chip label="primary" color="primary" />
-                                <Chip label="warning" color="warning" />
-                                <Chip label="info" color="info" />
-                                <Chip label="success" color="success" />
-                                <Chip label="error" color="error" />
-                            </Stack>
-                        </Stack>
-
-                         <Stack spacing={2}>
-                            <Typography variant="h6"> size </Typography>
-
-                            <Stack direction="row" spacing={2} flexWrap="wrap">
-                                <Chip label="small" size="small"  color="primary"/>
-                                <Chip label="medium" size="medium" color="primary" />
-                            </Stack>
-                        </Stack>
-
-                    </CardContent>
-                </Card>
-            </Container>
-        </>
-    )
-}
+            <Grid size={{ xs: 12, md: 6 }}>
+              <MainCard title="Size">
+                <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
+                  <Chip label="small" size="small" color="primary" />
+                  <Chip label="medium" size="medium" color="primary" />
+                </Stack>
+              </MainCard>
+            </Grid>
+          </Grid>
+        </MainCard>
+      </Container>
+    </>
+  );
+};
 
 export default ChipPage;

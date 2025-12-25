@@ -1,5 +1,6 @@
 import type { Components, Theme } from "@mui/material/styles";
 
+// ---------------------------------  OVERRIDES - CONTAINER  ---------------------------------
 const MuiContainer = (theme: Theme): Components["MuiContainer"] => ({
   styleOverrides: {
     root: {

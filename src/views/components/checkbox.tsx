@@ -1,25 +1,19 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Checkbox from "@mui/material/Checkbox";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 
+// @project
+import MainCard from "../../components/MainCard";
 
 const CheckboxPage = () =>{
     return(
         <>
             <Container maxWidth="lg" sx={{ py: 5 }}>
-                <Card>
-                    <CardHeader title="Checkbox Component Showcase" />
-                    <Divider />
-                    <CardContent>
+                <MainCard title="Checkbox Component Showcase">
                         <Checkbox />
-                    </CardContent>
-                </Card>
+                </MainCard>
             </Container>
         </>
     )
 }
-
 export default CheckboxPage;

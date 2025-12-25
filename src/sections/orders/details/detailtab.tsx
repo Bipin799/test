@@ -1,22 +1,20 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+// @project
+import OrderItem from "../../../components/orders/OrderItem";
+import MainCard from "../../../components/MainCard";
+
+// @assets
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 
-import OrderItem from "../../../components/orders/OrderItem";
-
 export default function Details() {
   return (
-    <Card>
-      <CardHeader title="Customer" />
-
-      <CardContent>
+    <MainCard>
         <Stack
           direction={{ xs: "column", md: "row" }}
           gap={4}
@@ -105,7 +103,6 @@ export default function Details() {
         </Stack>
 
         <Divider />
-      </CardContent>
-    </Card>
+    </MainCard>
   );
 }

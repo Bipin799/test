@@ -1,13 +1,14 @@
+// @react
 import { useState } from "react";
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import TablePagination from "@mui/material/TablePagination";
 import Typography from "@mui/material/Typography";
+
+// @project
+import MainCard from "../../components/MainCard";
 
 
 const rows = Array.from({ length: 90 }, (_, i) => `Item ${i + 1}`);
@@ -34,12 +35,7 @@ const PaginationPage = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
-      <Card>
-        <CardHeader title="Pagination Component Showcase" />
-        <Divider />
-
-        <CardContent>
-          {/* Demo Content */}
+      <MainCard title="Pagination Component Showcase">
           <Stack spacing={1} mb={3}>
             {visibleRows.map((row) => (
               <Typography key={row}>{row}</Typography>
@@ -57,8 +53,7 @@ const PaginationPage = () => {
             labelRowsPerPage="Items per page"
             rowsPerPageOptions={[5, 10, 25, 50]}
           />
-        </CardContent>
-      </Card>
+      </MainCard>
     </Container>
   );
 };

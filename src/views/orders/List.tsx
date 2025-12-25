@@ -1,21 +1,33 @@
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Stack from "@mui/material/Stack";
-import TablePagination from "@mui/material/TablePagination";
 
-import AddIcon from "@mui/icons-material/Add";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-
+// @react
 import { useNavigate } from "react-router-dom";
 
-import SearchInput from "../../components/orders/SearchInput";
+// @mui
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import TablePagination from "@mui/material/TablePagination";
+import TextField from "@mui/material/TextField";
+
+// @project
 import OrdersTable from "../../sections/orders/orderlist/table";
-import { rows } from "../../utils/rows";
+
+// @types
 import type { Order } from "../../types/order";
+
+// @utils
+import { rows } from "../../utils/rows";
+
+// @project
+import MainCard from "../../components/MainCard";
+
+// @assets
+import AddIcon from "@mui/icons-material/Add";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@mui/material/InputAdornment";
+
+
 
 
 export default function OrderList() {
@@ -27,26 +39,33 @@ export default function OrderList() {
 
   return (
     <Container maxWidth="lg">
-    <Card>
-      <CardHeader title="Order List" />
-        <Divider />
-      <CardContent>
-        
+    <MainCard title="Order List">
         <Stack direction="row" justifyContent="space-between">
-          <SearchInput />
+          <TextField
+            placeholder="Search"
+            slotProps={{
+              input: {
+                "data-search": true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                     <SearchIcon sx={{ color: "grey.600" }} />
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+
 
           <Stack direction="row" gap={3}>
             <Button variant="outlined" startIcon={<FileDownloadOutlinedIcon />}>
               Download
             </Button>
-            <Button variant="contained" startIcon={<AddIcon />}>
+            <Button variant="contained" size="medium" startIcon={<AddIcon />}>
               Add New
             </Button>
           </Stack>
         </Stack>
         <OrdersTable rows={rows} onView={handleViewOrder} />
-      </CardContent>
-
       <TablePagination
         component="div"
         count={rows.length}
@@ -56,7 +75,7 @@ export default function OrderList() {
         onRowsPerPageChange={() => {}}
         labelRowsPerPage="Items per page"
       />
-    </Card>
+    </MainCard>
     </Container>
   
   );

@@ -1,23 +1,36 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 
+// @project
+import MainCard from "../../components/MainCard";
 
-const TextfieldpPage = () =>{
-    return(
-        <>
-            <Container maxWidth="lg" sx={{ py: 5 }}>
-                <Card>
-                    <CardHeader title="Textfield Component Showcase" />
-                    <CardContent>
-                        <TextField label="Outlined" variant="outlined" />
-                    </CardContent>   
-                </Card>
-            </Container>
-        </>
-    )
-}
+// @assets
+import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@mui/material/InputAdornment";
+
+const TextfieldpPage = () => {
+  return (
+    <>
+      <Container maxWidth="lg" sx={{ py: 5 }}>
+        <MainCard title="Textfield Component Showcase">
+          <TextField
+            placeholder="Search"
+            slotProps={{
+              input: {
+                "data-search": true,
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon sx={{ color: "grey.600" }} />
+                  </InputAdornment>
+                ),
+              },
+            }}
+          />
+        </MainCard>
+      </Container>
+    </>
+  );
+};
 
 export default TextfieldpPage;

@@ -1,19 +1,17 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// @mui
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+// @project
+import MainCard from "../../components/MainCard";
+
 const TypographyPage = () =>{
     return (
         <>
             <Container maxWidth="lg" sx={{ py: 5 }}>
-                <Card>
-                    <CardHeader title="Typography Component Showcase" />
-                    <Divider />
-                    <CardContent>
+                <MainCard title="Typography Component Showcase">
                         <Stack spacing={3}>
                             {/* Headings */}
                             <Typography variant="h1">h1. Heading</Typography>
@@ -73,9 +71,7 @@ const TypographyPage = () =>{
                             link. This is link text style
                             </Typography>
                         </Stack>
-
-                    </CardContent>
-                </Card>
+                </MainCard>
             </Container>
         </>
     )

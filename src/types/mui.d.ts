@@ -2,6 +2,9 @@
 import "@mui/material/TableCell";
 import "@mui/material/styles";
 import "@mui/material/Typography";
+import "@mui/material/TextField";
+import "@mui/material/TextField";
+import "@mui/material/OutlinedInput";
 
 declare module "@mui/material/TableCell" {
   interface TableCellPropsVariantOverrides {
@@ -36,3 +39,28 @@ declare module "@mui/material/Typography" {
     link: true;
   }
 }
+
+declare module "@mui/material/TextField" {
+  interface TextFieldPropsVariantOverrides {
+    search: true;
+  }
+}
+
+declare module "@mui/material/TextField" {
+  interface TextFieldPropsVariantOverrides {
+    search: true;
+  }
+}
+
+declare module "@mui/material/OutlinedInput" {
+  interface OutlinedInputPropsVariantOverrides {
+    search: true;
+  }
+}
+
+declare module "@mui/material/TextField" {
+  interface TextFieldInputSlotPropsOverrides {
+    "data-search"?: boolean;
+  }
+}
+

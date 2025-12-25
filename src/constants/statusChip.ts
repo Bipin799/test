@@ -1,3 +1,4 @@
+// @types
 import type { OrderStatus } from "../types/order";
 
 export const statusChipColorMap: Record<

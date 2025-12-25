@@ -1,3 +1,4 @@
+// @react
 import { useState } from "react";
 
 // @mui
@@ -10,14 +11,18 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
+import { useTheme } from "@mui/material/styles";
 
+// @assets
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
+// @types
 import type { Order } from "../../../types/order";
+
+// @constants
 import { statusChipColorMap } from "../../../constants/statusChip";
-// import { palette } from "../../../theme/palette";
-import theme from "../../../theme";
+
 
 
 type OrdersTableProps = {
@@ -29,6 +34,7 @@ type OrdersTableProps = {
 
 export default function OrdersTable({ rows, onView }: OrdersTableProps) {
   const [selected, setSelected] = useState<Order["id"][]>([]);
+  const theme  = useTheme();
 
   
   const handleSelectRow = (id: Order["id"]) => {
@@ -85,7 +91,7 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
                 />
               </TableCell>
 
-              <TableCell sx={{ color: theme.palette.primary.main }}>{row.id}</TableCell>
+              <TableCell sx={{ color: theme.palette.grey[900] }}>{row.id}</TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.branch}</TableCell>
               <TableCell>{row.payment}</TableCell>

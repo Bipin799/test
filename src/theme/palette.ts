@@ -1,17 +1,20 @@
+// ---------------------------------  THEME - PALETTE  ---------------------------------
 export const palette = {
+   // --------------------------------- GRAY / NEUTRAL ---------------------------------
   grey: {
     0: "#FFFFFF",
     50: "#F8FAFC",
     100: "#EEF2F6",
     200: "#E3E8EF",
     300: "#C3CCD8",
-    400: "#95A4B8",
+    400: "#9FAAB8",
     500: "#697586",
     600: "#4B5565",
     700: "#364152",
     900: "#121926",
   },
 
+  // --------------------------------- PRIMARY ---------------------------------
   primary: {
     lighter: "#E3F2FD",
     light: "#90CAF9",
@@ -20,6 +23,7 @@ export const palette = {
     darkest: "#1565C0",
   },
 
+  // --------------------------------- SECONDARY ---------------------------------
   secondary: {
     lighter: "#EDE7F6",
     light: "#B39DDB",
@@ -28,14 +32,16 @@ export const palette = {
     darkest: "#4527A0",
   },
 
+  // --------------------------------- SUCCESS ---------------------------------
   success: {
-    lighter: "#D4FEE0",
+    lighter: "#D4FFE0",
     light: "#61FFB2",
     main: "#11C86F",
     dark: "#00C853",
     darkest: "#079442",
   },
 
+  // --------------------------------- ERROR ---------------------------------
   error: {
     lighter: "#FFE3E3",
     light: "#EF9A9A",
@@ -44,18 +50,22 @@ export const palette = {
     darkest: "#A21313",
   },
 
+  // --------------------------------- ORANGE ---------------------------------
+  orange: {
+    lighter: "#FFEBD5",
+    light: "#FFB266",
+    main: "#FF8000",
+    dark: "#CC6600",
+    darkest: "#AE5802",
+  },
+
+  // --------------------------------- WARNING ---------------------------------
   warning: {
     lighter: "#FFF6D7",
     light: "#FFE479",
     main: "#F8BB05",
     dark: "#E6AD00",
     darkest: "#C29614",
-  },
-
-  text: {
-    primary: "#121926",
-    secondary: "#697586",
-    // disabled: "#98A2B3",
   },
 
 };

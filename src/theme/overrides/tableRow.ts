@@ -1,5 +1,6 @@
 import type { Components, Theme } from "@mui/material/styles";
 
+// ---------------------------------  OVERRIDES - TABLE ROW  ---------------------------------
 export default function MuiTableRow(theme: Theme): Components["MuiTableRow"] {
   return {
     styleOverrides: {

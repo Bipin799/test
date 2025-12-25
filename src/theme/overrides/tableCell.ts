@@ -1,6 +1,6 @@
-// theme/overrides/tableCell.ts
 import type { Components, Theme } from "@mui/material/styles";
 
+// ---------------------------------  OVERRIDES - TABLE CELL  ---------------------------------
 export default function MuiTableCell(
   theme: Theme
 ): Components["MuiTableCell"] {
