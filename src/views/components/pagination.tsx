@@ -12,6 +12,7 @@ import MainCard from "../../components/MainCard";
 
 
 const rows = Array.from({ length: 90 }, (_, i) => `Item ${i + 1}`);
+// ---------------------------------  PAGINATION - PAGE  ---------------------------------
 
 const PaginationPage = () => {
   const [page, setPage] = useState(0);

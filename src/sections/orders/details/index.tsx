@@ -19,6 +19,7 @@ import type { Order } from "../../../types/order";
 // @utils
 import { rows } from "../../../utils/rows";
 
+// ---------------------------------  DETAILS - INDEX  ---------------------------------
 
 export default function OrderDetailsPage() {
   const { orderId } = useParams<{ orderId: string }>();

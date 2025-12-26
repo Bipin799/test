@@ -1,6 +1,7 @@
-import type { Components, Theme } from "@mui/material/styles";
+import { alpha, type Components, type Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - TABLE PAGINATION  ---------------------------------
+
 export default function MuiTablePagination(
   theme: Theme
 ): Components["MuiTablePagination"] {
@@ -22,11 +23,8 @@ export default function MuiTablePagination(
         py:2,
         px:3,
         columnGap: 8,
-        border: "1px solid rgba(227, 232, 239, 1)",
-        boxSizing: "border-box",
-        boxShadow: "0px 1px 2px rgba(10, 13, 18, 0.05)",
-
-
+        border: `1px solid ${theme.palette.grey[200]}`,
+        boxSizing: "border-box"
       },
       actions: {
         "& .MuiIconButton-root": {

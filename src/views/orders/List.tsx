@@ -1,4 +1,3 @@
-
 // @react
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +6,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import TablePagination from "@mui/material/TablePagination";
-import TextField from "@mui/material/TextField";
+import OutlinedInput from "@mui/material/OutlinedInput";
 
 // @project
 import OrdersTable from "../../sections/orders/orderlist/table";
@@ -27,8 +26,7 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
 
-
-
+// ---------------------------------  ORDER LIST - PAGE  ---------------------------------
 
 export default function OrderList() {
   const navigate = useNavigate();
@@ -39,22 +37,16 @@ export default function OrderList() {
 
   return (
     <Container maxWidth="lg">
-    <MainCard title="Order List">
+      <MainCard title="Order List">
         <Stack direction="row" justifyContent="space-between">
-          <TextField
+          <OutlinedInput
             placeholder="Search"
-            slotProps={{
-              input: {
-                "data-search": true,
-                startAdornment: (
-                  <InputAdornment position="start">
-                     <SearchIcon sx={{ color: "grey.600" }} />
-                  </InputAdornment>
-                ),
-              },
-            }}
+            startAdornment={
+              <InputAdornment position="start">
+                <SearchIcon sx={{ color: "grey.600" }} />
+              </InputAdornment>
+            }
           />
-
 
           <Stack direction="row" gap={3}>
             <Button variant="outlined" startIcon={<FileDownloadOutlinedIcon />}>
@@ -66,17 +58,16 @@ export default function OrderList() {
           </Stack>
         </Stack>
         <OrdersTable rows={rows} onView={handleViewOrder} />
-      <TablePagination
-        component="div"
-        count={rows.length}
-        page={0}
-        rowsPerPage={10}
-        onPageChange={() => {}}
-        onRowsPerPageChange={() => {}}
-        labelRowsPerPage="Items per page"
-      />
-    </MainCard>
+        <TablePagination
+          component="div"
+          count={rows.length}
+          page={0}
+          rowsPerPage={10}
+          onPageChange={() => {}}
+          onRowsPerPageChange={() => {}}
+          labelRowsPerPage="Items per page"
+        />
+      </MainCard>
     </Container>
-  
   );
 }

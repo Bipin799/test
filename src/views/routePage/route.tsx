@@ -19,6 +19,8 @@ const routes = [
     { label: "Typography", path: "/component/typography" },
 ];
 
+// ---------------------------------  ROUTE PAGE  ---------------------------------
+
 const RoutePage = () => {
   const navigate = useNavigate();
 
@@ -35,7 +37,7 @@ const RoutePage = () => {
                   variant="outlined"
                   onClick={() => navigate(item.path)}
                 >
-                  {item.label}
+                  {item.label}            
                 </Button>
               </Grid>
             ))}

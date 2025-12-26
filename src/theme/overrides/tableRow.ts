@@ -1,6 +1,7 @@
 import type { Components, Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - TABLE ROW  ---------------------------------
+
 export default function MuiTableRow(theme: Theme): Components["MuiTableRow"] {
   return {
     styleOverrides: {
@@ -11,15 +12,9 @@ export default function MuiTableRow(theme: Theme): Components["MuiTableRow"] {
         },
 
         /* Selected row background */
-        "&.Mui-selected": {
+        "&.Mui-selected, &.Mui-selected.MuiTableRow-hover:hover": {
           backgroundColor: theme.palette.primary.lighter,
         },
-
-        /* Selected row should NOT change on hover */
-        "&.Mui-selected.MuiTableRow-hover:hover": {
-          backgroundColor: theme.palette.primary.lighter,
-        },
-
       },
     },
   };

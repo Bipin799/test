@@ -5,6 +5,8 @@ import Container from "@mui/material/Container";
 // @project
 import MainCard from "../../components/MainCard";
 
+// ---------------------------------  CHECKBOX - PAGE  ---------------------------------
+
 const CheckboxPage = () =>{
     return(
         <>

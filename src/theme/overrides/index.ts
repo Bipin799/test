@@ -10,10 +10,10 @@ import MuiTablePagination from "./tablePagination";
 import MuiTableCell from "./tableCell";
 import MuiContainer from "./container";
 import MuiTableRow from "./tableRow";
-import MuiTextField from "./textfield";
 import MuiOutlinedInput from "./outlinedInput";
 
 // ---------------------------------  OVERRIDES - INDEX  ---------------------------------
+
 export default function components(theme: Theme): Components {
   return {
     MuiButton: MuiButton(),
@@ -24,7 +24,6 @@ export default function components(theme: Theme): Components {
     MuiTablePagination: MuiTablePagination(theme),
     MuiContainer: MuiContainer(theme),
     MuiTableRow: MuiTableRow(theme),
-    MuiTextField: MuiTextField(),
     MuiOutlinedInput: MuiOutlinedInput(theme),
   };
 }

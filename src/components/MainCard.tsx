@@ -7,18 +7,16 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import Divider from "@mui/material/Divider";
 
-
 interface MainCardProps {
   title?: string;
   children: ReactNode;
 }
 
-export default function MainCard({
-  title,
-  children,
-}: MainCardProps) {
+// ---------------------------------  COMPONENTS - MAINCARD  ---------------------------------
+
+export default function MainCard({ title, children }: MainCardProps) {
   return (
-    <Card elevation={3} sx = {{ borderRadius: 3}} >
+    <Card elevation={3} sx={{ borderRadius: 3 }}>
       {title && (
         <>
           <CardHeader title={title} />
@@ -27,7 +25,6 @@ export default function MainCard({
       )}
 
       <CardContent>{children}</CardContent>
-
     </Card>
   );
 }

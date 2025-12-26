@@ -9,6 +9,8 @@ import MainCard from "../../components/MainCard";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
 
+// ---------------------------------  TEXTFIELD - PAGE  ---------------------------------
+
 const TextfieldpPage = () => {
   return (
     <>

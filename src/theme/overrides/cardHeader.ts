@@ -1,6 +1,7 @@
 import type { Components, Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - CARD HEADER  ---------------------------------
+
 export default function MuiCardHeader(
   theme: Theme
 ): Components["MuiCardHeader"] {
@@ -14,7 +15,6 @@ export default function MuiCardHeader(
         gap: "15px",
         borderBottom: `1px solid ${theme.palette.grey[200]}`, 
       },
-
       title: {
         fontSize: "16px",
         color: theme.palette.grey[900],

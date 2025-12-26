@@ -7,6 +7,7 @@ import { palette } from "./palette";
 import typography from "./typography";
 
 // ---------------------------------  THEME - INDEX  ---------------------------------
+
 const theme = createTheme({
   spacing: 4,
   palette,

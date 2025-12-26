@@ -14,12 +14,14 @@ import OrderDetails from "../views/orders/Details";
 import OrderList from "../views/orders/List";
 import RoutePage from "../views/routePage/route";
 
+// ---------------------------------  ROUTES - MAIN  ---------------------------------
 
 export const router = createBrowserRouter([
     {
-    element: <AppLayout />,   // 👈 global layout
+      path: "/",
+    element: <AppLayout />,  
     children: [
-      { path: "/", element: <OrderList /> },
+      { index: true, element: <OrderList /> },
       { path: "/details/:orderId", element: <OrderDetails /> },
 
       { path: "/component", element: <RoutePage /> },

@@ -2,6 +2,7 @@
 import { palette } from "./palette";
 
 // ---------------------------------  THEME - TYPOGRAPHY  ---------------------------------
+
 export const typography = {
   fontFamily: `"Roboto", sans-serif`,
 
@@ -79,7 +80,7 @@ export const typography = {
     fontSize: "12px",
     fontWeight: 500,
     lineHeight: "20px",
-    color: palette.grey[0],
+    color: palette.grey[700],
   },
 
   caption: {

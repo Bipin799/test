@@ -1,5 +1,7 @@
 import type { Components, Theme } from "@mui/material/styles";
 
+// ---------------------------------  OVERRIDES - OUTLINED INPUT  ---------------------------------
+
 export default function MuiOutlinedInput(
   theme: Theme
 ): Components["MuiOutlinedInput"] {
@@ -8,6 +10,7 @@ export default function MuiOutlinedInput(
       root: {
         '&[data-search="true"]': {
           height: 44,
+
           borderRadius: 12,
           backgroundColor: theme.palette.grey[50],
           boxShadow: "0px 1px 2px rgba(10,13,18,0.08)",
@@ -30,7 +33,7 @@ export default function MuiOutlinedInput(
             lineHeight: "20px",
           },
         },
-      },
+      }
     },
   };
 }

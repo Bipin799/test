@@ -1,6 +1,9 @@
 // ---------------------------------  THEME - PALETTE  ---------------------------------
+
 export const palette = {
+
    // --------------------------------- GRAY / NEUTRAL ---------------------------------
+
   grey: {
     0: "#FFFFFF",
     50: "#F8FAFC",
@@ -15,6 +18,7 @@ export const palette = {
   },
 
   // --------------------------------- PRIMARY ---------------------------------
+
   primary: {
     lighter: "#E3F2FD",
     light: "#90CAF9",
@@ -24,6 +28,7 @@ export const palette = {
   },
 
   // --------------------------------- SECONDARY ---------------------------------
+
   secondary: {
     lighter: "#EDE7F6",
     light: "#B39DDB",
@@ -33,6 +38,7 @@ export const palette = {
   },
 
   // --------------------------------- SUCCESS ---------------------------------
+
   success: {
     lighter: "#D4FFE0",
     light: "#61FFB2",
@@ -42,6 +48,7 @@ export const palette = {
   },
 
   // --------------------------------- ERROR ---------------------------------
+
   error: {
     lighter: "#FFE3E3",
     light: "#EF9A9A",
@@ -51,6 +58,7 @@ export const palette = {
   },
 
   // --------------------------------- ORANGE ---------------------------------
+
   orange: {
     lighter: "#FFEBD5",
     light: "#FFB266",
@@ -60,6 +68,7 @@ export const palette = {
   },
 
   // --------------------------------- WARNING ---------------------------------
+  
   warning: {
     lighter: "#FFF6D7",
     light: "#FFE479",

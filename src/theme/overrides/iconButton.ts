@@ -1,6 +1,7 @@
-import type { Components,Theme } from "@mui/material/styles";
+import type { Components, Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - ICON BUTTON  ---------------------------------
+
 export default function MuiIconButton(
   theme: Theme
 ): Components["MuiIconButton"] {
@@ -10,10 +11,6 @@ export default function MuiIconButton(
         "&.outlined": {
           borderRadius: 8,
           padding: 6,
-
-          "&:hover": {
-            backgroundColor: theme.palette.action.hover,
-          },
         },
       },
     },

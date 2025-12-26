@@ -7,6 +7,8 @@ import Typography from "@mui/material/Typography";
 // @project
 import MainCard from "../../components/MainCard";
 
+// ---------------------------------  TYPOGRAPHY - PAGE  ---------------------------------
+
 const TypographyPage = () =>{
     return (
         <>

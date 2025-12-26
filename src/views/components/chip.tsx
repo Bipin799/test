@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 // @project
 import MainCard from "../../components/MainCard";
 
+// ---------------------------------  CHIP - PAGE  ---------------------------------
+
 const ChipPage = () => {
   return (
     <>
