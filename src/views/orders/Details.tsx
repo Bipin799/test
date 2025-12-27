@@ -3,12 +3,10 @@ import OrderDetailsPage from "../../sections/orders/details";
 
 // ---------------------------------  ORDER LIST - PAGE  ---------------------------------
 
-const OrderList = () =>{
-  return(
+export default function OrderList() {
+  return (
     <>
-      <OrderDetailsPage/>
+      <OrderDetailsPage />
     </>
   )
- }
-
- export default OrderList;
+}

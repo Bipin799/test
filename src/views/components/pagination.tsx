@@ -14,7 +14,7 @@ import MainCard from "../../components/MainCard";
 const rows = Array.from({ length: 90 }, (_, i) => `Item ${i + 1}`);
 // ---------------------------------  PAGINATION - PAGE  ---------------------------------
 
-const PaginationPage = () => {
+export default function PaginationPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -37,26 +37,24 @@ const PaginationPage = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
       <MainCard title="Pagination Component Showcase">
-          <Stack spacing={1} mb={3}>
-            {visibleRows.map((row) => (
-              <Typography key={row}>{row}</Typography>
-            ))}
-          </Stack>
+        <Stack spacing={1} mb={3}>
+          {visibleRows.map((row) => (
+            <Typography key={row}>{row}</Typography>
+          ))}
+        </Stack>
 
-          {/* Pagination Component */}
-          <TablePagination
-            component="div"
-            count={rows.length}
-            page={page}
-            rowsPerPage={rowsPerPage}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-            labelRowsPerPage="Items per page"
-            rowsPerPageOptions={[5, 10, 25, 50]}
-          />
+        {/* Pagination Component */}
+        <TablePagination
+          component="div"
+          count={rows.length}
+          page={page}
+          rowsPerPage={rowsPerPage}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          labelRowsPerPage="Items per page"
+          rowsPerPageOptions={[5, 10, 25, 50]}
+        />
       </MainCard>
     </Container>
   );
 };
-
-export default PaginationPage;

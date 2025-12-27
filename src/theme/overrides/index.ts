@@ -3,14 +3,14 @@ import type { Components, Theme } from "@mui/material/styles";
 
 // @project
 import MuiButton from "./button";
-import MuiCardHeader from "./cardHeader";
+import MuiCardHeader from "./card-header";
 import MuiChip from "./chip";
-import MuiIconButton from "./iconButton";
-import MuiTablePagination from "./tablePagination";
-import MuiTableCell from "./tableCell";
+import MuiIconButton from "./icon-button";
+import MuiTablePagination from "./table-pagination";
+import MuiTableCell from "./table-cell";
 import MuiContainer from "./container";
-import MuiTableRow from "./tableRow";
-import MuiOutlinedInput from "./outlinedInput";
+import MuiTableRow from "./table-row";
+import MuiOutlinedInput from "./outlined-input";
 
 // ---------------------------------  OVERRIDES - INDEX  ---------------------------------
 
@@ -27,4 +27,3 @@ export default function components(theme: Theme): Components {
     MuiOutlinedInput: MuiOutlinedInput(theme),
   };
 }
- 

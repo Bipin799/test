@@ -3,8 +3,6 @@ import { Outlet } from "react-router-dom";
 
 // ---------------------------------  LAYOUT - APP LAYOUT  ---------------------------------
 
-const AppLayout = () => {
+export default function AppLayout() {
   return <Outlet />;
 };
-
-export default AppLayout;

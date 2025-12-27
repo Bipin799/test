@@ -9,7 +9,7 @@ import MainCard from "../../components/MainCard";
 
 // ---------------------------------  CHIP - PAGE  ---------------------------------
 
-const ChipPage = () => {
+export default function ChipPage() {
   return (
     <>
       <Container maxWidth="lg" sx={{ py: 5 }}>
@@ -41,5 +41,3 @@ const ChipPage = () => {
     </>
   );
 };
-
-export default ChipPage;

@@ -7,11 +7,11 @@ import Typography from "@mui/material/Typography";
 
 // @project
 import MainCard from "../../components/MainCard";
-import { colorData } from  "../../utils/colorData";
+import { colorData } from "../../utils/color-data";
 
 // ---------------------------------  COLOR - PAGE  ---------------------------------
 
-const ColorPage = () => {
+export default function ColorPage() {
   const theme = useTheme();
 
   return (
@@ -25,7 +25,7 @@ const ColorPage = () => {
               </Typography>
 
               <Stack
-               direction="row"
+                direction="row"
                 gap={2}
                 flexWrap="wrap"
                 justifyContent="center"
@@ -65,8 +65,8 @@ const ColorPage = () => {
                     </Stack>
                   </Stack>
                 ))}
-                
-               </Stack>
+
+              </Stack>
             </Stack>
           ))}
         </Stack>
@@ -74,6 +74,4 @@ const ColorPage = () => {
     </Container>
   );
 };
-
-export default ColorPage;
 

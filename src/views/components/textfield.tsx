@@ -11,7 +11,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 // ---------------------------------  TEXTFIELD - PAGE  ---------------------------------
 
-const TextfieldpPage = () => {
+export default function TextfieldpPage() {
   return (
     <>
       <Container maxWidth="lg" sx={{ py: 5 }}>
@@ -34,5 +34,3 @@ const TextfieldpPage = () => {
     </>
   );
 };
-
-export default TextfieldpPage;

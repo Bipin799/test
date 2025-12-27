@@ -7,15 +7,14 @@ import MainCard from "../../components/MainCard";
 
 // ---------------------------------  CHECKBOX - PAGE  ---------------------------------
 
-const CheckboxPage = () =>{
-    return(
+export default function CheckboxPage() {
+    return (
         <>
             <Container maxWidth="lg" sx={{ py: 5 }}>
                 <MainCard title="Checkbox Component Showcase">
-                        <Checkbox />
+                    <Checkbox />
                 </MainCard>
             </Container>
         </>
     )
 }
-export default CheckboxPage;

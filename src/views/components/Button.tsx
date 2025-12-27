@@ -12,7 +12,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
 // ---------------------------------  BUTTON - PAGE  ---------------------------------
 
-const ButtonPage = () => {
+export default function ButtonPage() {
   return (
     <Container maxWidth="lg" sx={{ py: 5 }}>
       <MainCard title="Button Component Showcase">
@@ -37,5 +37,3 @@ const ButtonPage = () => {
     </Container>
   );
 };
-
-export default ButtonPage;

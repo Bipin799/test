@@ -9,7 +9,7 @@ import TablePagination from "@mui/material/TablePagination";
 import OutlinedInput from "@mui/material/OutlinedInput";
 
 // @project
-import OrdersTable from "../../sections/orders/orderlist/table";
+import OrdersTable from "../../sections/orders/orderlist/Table";
 
 // @types
 import type { Order } from "../../types/order";
@@ -63,8 +63,8 @@ export default function OrderList() {
           count={rows.length}
           page={0}
           rowsPerPage={10}
-          onPageChange={() => {}}
-          onRowsPerPageChange={() => {}}
+          onPageChange={() => { }}
+          onRowsPerPageChange={() => { }}
           labelRowsPerPage="Items per page"
         />
       </MainCard>

@@ -12,14 +12,14 @@ import { TextFieldPage } from "../views/components";
 import { TypographyPage } from "../views/components";
 import OrderDetails from "../views/orders/Details";
 import OrderList from "../views/orders/List";
-import RoutePage from "../views/routePage/route";
+import RoutePage from "../views/route-page/Route";
 
 // ---------------------------------  ROUTES - MAIN  ---------------------------------
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-    element: <AppLayout />,  
+  {
+    path: "/",
+    element: <AppLayout />,
     children: [
       { index: true, element: <OrderList /> },
       { path: "/details/:orderId", element: <OrderDetails /> },

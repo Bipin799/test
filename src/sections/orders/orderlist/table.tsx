@@ -21,7 +21,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import type { Order } from "../../../types/order";
 
 // @constants
-import { statusChipColorMap } from "../../../constants/statusChip";
+import { statusChipColorMap } from "../../../constants/status-chip";
 
 
 
@@ -34,9 +34,9 @@ type OrdersTableProps = {
 
 export default function OrdersTable({ rows, onView }: OrdersTableProps) {
   const [selected, setSelected] = useState<Order["id"][]>([]);
-  const theme  = useTheme();
+  const theme = useTheme();
 
-  
+
   const handleSelectRow = (id: Order["id"]) => {
     setSelected((prev) =>
       prev.includes(id)
@@ -48,11 +48,11 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
   return (
     <Table>
       <TableHead>
-        <TableRow 
+        <TableRow
         >
           <TableCell padding="checkbox">
             <Checkbox
-             />
+            />
           </TableCell>
 
           {[
@@ -63,7 +63,7 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
             "Order Date",
             "Status",
           ].map((title) => (
-            <TableCell  key={title}>
+            <TableCell key={title}>
               <TableSortLabel active direction="desc">
                 {title}
               </TableSortLabel>

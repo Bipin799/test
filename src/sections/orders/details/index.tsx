@@ -9,9 +9,9 @@ import Tabs from "@mui/material/Tabs";
 
 // @project
 import MainCard from "../../../components/MainCard";
-import Details from "./detailtab";
+import Details from "./Detailtab";
 import Invoice from "./Invoicetab";
-import Status from "./statustab";
+import Status from "./Statustab";
 
 // @types
 import type { Order } from "../../../types/order";
@@ -35,8 +35,8 @@ export default function OrderDetailsPage() {
 
   return (
     <>
-    <Container maxWidth="lg">
-      <MainCard title = "Order Details">
+      <Container maxWidth="lg">
+        <MainCard title="Order Details">
           <Tabs
             value={tab}
             onChange={(_, value) => setTab(value)}
@@ -52,9 +52,9 @@ export default function OrderDetailsPage() {
           {tab === 1 && <Invoice />}
           {tab === 2 && <Status />}
 
-      </MainCard>
-    </Container>
+        </MainCard>
+      </Container>
     </>
-    
+
   );
 }
