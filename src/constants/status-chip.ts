@@ -1,12 +1,12 @@
 // @types
-import type { OrderStatus } from "../types/order";
+import type { OrderStatus } from "@/types/order";
 
 export const statusChipColorMap: Record<
   OrderStatus,
-  "pending" | "hold" | "complete" | "cancel"
+  "success" | "primary" | "warning" | "error"
 > = {
-  Pending: "pending",
-  Hold: "hold",
-  Complete: "complete",
-  Cancel: "cancel",
+  Pending: "warning",
+  Hold: "primary",
+  Complete: "success",
+  Cancel: "error",
 };

@@ -13,6 +13,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 
 // ---------------------------------  DETAILS - DETAILSTAB  ---------------------------------
+
 export default function Details() {
   return (
     <MainCard>

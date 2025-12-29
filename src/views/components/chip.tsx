@@ -18,7 +18,6 @@ export default function ChipPage() {
               <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
                 <Chip label="primary" color="primary" />
                 <Chip label="warning" color="warning" />
-                <Chip label="info" color="info" />
                 <Chip label="success" color="success" />
                 <Chip label="error" color="error" />
               </Stack>

@@ -17,12 +17,10 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
 // @types
-import type { Order } from "../../../types/order";
+import type { Order } from "@/types/order";
 
 // @constants
-import { statusChipColorMap } from "../../../constants/status-chip";
-
-
+import { statusChipColorMap } from "@/constants/status-chip";
 
 type OrdersTableProps = {
   rows: Order[];
@@ -35,23 +33,18 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
   const [selected, setSelected] = useState<Order["id"][]>([]);
   const theme = useTheme();
 
-
   const handleSelectRow = (id: Order["id"]) => {
     setSelected((prev) =>
-      prev.includes(id)
-        ? prev.filter((item) => item !== id)
-        : [...prev, id]
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
 
   return (
     <Table>
       <TableHead>
-        <TableRow
-        >
+        <TableRow>
           <TableCell padding="checkbox">
-            <Checkbox
-            />
+            <Checkbox />
           </TableCell>
 
           {[
@@ -78,11 +71,7 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
           const isSelected = selected.includes(row.id);
 
           return (
-            <TableRow
-              key={row.id}
-              hover
-              selected={isSelected}
-            >
+            <TableRow key={row.id} hover selected={isSelected}>
               <TableCell padding="checkbox">
                 <Checkbox
                   checked={isSelected}
@@ -90,7 +79,9 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
                 />
               </TableCell>
 
-              <TableCell sx={{ color: theme.palette.grey[900] }}>{row.id}</TableCell>
+              <TableCell sx={{ color: theme.palette.grey[900] }}>
+                {row.id}
+              </TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.branch}</TableCell>
               <TableCell>{row.payment}</TableCell>
@@ -106,7 +97,7 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
                 <IconButton color="primary" onClick={() => onView(row.id)}>
                   <VisibilityOutlinedIcon />
                 </IconButton>
-                <IconButton color="secondary" >
+                <IconButton color="secondary">
                   <EditOutlinedIcon />
                 </IconButton>
               </TableCell>
@@ -114,8 +105,6 @@ export default function OrdersTable({ rows, onView }: OrdersTableProps) {
           );
         })}
       </TableBody>
-
-
     </Table>
   );
 }

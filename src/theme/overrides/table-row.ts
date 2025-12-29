@@ -1,19 +1,22 @@
-import type { Components, Theme } from "@mui/material/styles";
+// @mui
+import type { Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - TABLE ROW  ---------------------------------
 
-export default function MuiTableRow(theme: Theme): Components["MuiTableRow"] {
+export default function TableRow(theme: Theme) {
   return {
-    styleOverrides: {
-      root: {
-        /* Hover for all non-selected rows */
-        "&.MuiTableRow-hover:hover:not(.Mui-selected)": {
-          backgroundColor: theme.palette.grey[50],
-        },
+    MuiTableRow: {
+      styleOverrides: {
+        root: {
+          /* Hover for all non-selected rows */
+          "&.MuiTableRow-hover:hover:not(.Mui-selected)": {
+            backgroundColor: theme.palette.grey[50],
+          },
 
-        /* Selected row background */
-        "&.Mui-selected, &.Mui-selected.MuiTableRow-hover:hover": {
-          backgroundColor: theme.palette.primary.lighter,
+          /* Selected row background */
+          "&.Mui-selected, &.Mui-selected.MuiTableRow-hover:hover": {
+            backgroundColor: theme.palette.primary.lighter,
+          },
         },
       },
     },

@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 
 export default function ComponentLayout() {
     return (
-        <Container maxWidth="lg" sx={{ py: 5 }}>
+        <Container maxWidth="lg">
             <Outlet />
         </Container>
     );

@@ -16,6 +16,10 @@ export default function TextfieldpPage() {
       <MainCard title="Textfield Component Showcase">
         <TextField
           placeholder="Search"
+          sx = {{
+            height: 44,
+            width: 320
+          }}
           slotProps={{
             input: {
               "data-search": true,

@@ -1,23 +1,23 @@
-import type { Components, Theme } from "@mui/material/styles";
+// @mui
+import type { Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - TABLE CELL  ---------------------------------
 
-export default function MuiTableCell(
-  theme: Theme
-): Components["MuiTableCell"] {
+export default function TableCell(theme: Theme) {
   return {
-    styleOverrides: {
-      root: {
-        lineHeight: "20px",
-        fontSize: "14px",
-        color: theme.palette.grey[700],
-      },
-
-      head: {
-        fontWeight: 500,
-        fontSize: "14px",
-        lineHeight: "20px",
-        color: theme.palette.grey[900],
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          lineHeight: "20px",
+          fontSize: 14,
+          color: theme.palette.grey[700],
+        },
+        head: {
+          fontWeight: 500,
+          fontSize: 14,
+          lineHeight: "20px",
+          color: theme.palette.grey[900],
+        },
       },
     },
   };

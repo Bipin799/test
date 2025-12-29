@@ -1,16 +1,14 @@
-import type { Components, Theme } from "@mui/material/styles";
-
 // ---------------------------------  OVERRIDES - ICON BUTTON  ---------------------------------
 
-export default function MuiIconButton(
-  theme: Theme
-): Components["MuiIconButton"] {
+export default function IconButton() {
   return {
-    styleOverrides: {
-      root: {
-        "&.outlined": {
-          borderRadius: 8,
-          padding: 6,
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&.outlined": {
+            borderRadius: 8,
+            padding: 6,
+          },
         },
       },
     },

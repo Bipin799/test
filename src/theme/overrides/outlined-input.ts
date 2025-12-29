@@ -1,39 +1,41 @@
-import type { Components, Theme } from "@mui/material/styles";
+// @mui
+import type { Theme } from "@mui/material/styles";
 
 // ---------------------------------  OVERRIDES - OUTLINED INPUT  ---------------------------------
 
-export default function MuiOutlinedInput(
-  theme: Theme
-): Components["MuiOutlinedInput"] {
+export default function OutlinedInput(theme: Theme) {
   return {
-    styleOverrides: {
-      root: {
-        '&[data-search="true"]': {
-          height: 44,
+  MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&[data-search="true"]': {
+            height: 44,
+            backgroundColor: theme.palette.grey[50],
+            borderRadius: 12,
+            boxShadow: "0px 1px 2px rgba(10,13,18,0.08)",
 
-          borderRadius: 12,
-          backgroundColor: theme.palette.grey[50],
-          boxShadow: "0px 1px 2px rgba(10,13,18,0.08)",
-          color: theme.palette.grey[500],
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.grey[200],
+            },
 
-          "& fieldset": {
-            borderColor: theme.palette.grey[200],
-          },
-          "&:hover fieldset": {
-            borderColor: theme.palette.grey[200],
-          },
-          "&.Mui-focused fieldset": {
-            borderColor: theme.palette.grey[200],
-            borderWidth: 1,
-          },
+            "&:hover .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.grey[200],
+            },
 
-          "& input": {
-            padding: "10px 12px",
-            fontSize: 16,
-            lineHeight: "20px",
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: theme.palette.grey[200],
+              borderWidth: 1,
+            },
           },
         },
-      }
+
+        input: {
+          padding: "10px 12px",
+          fontSize: 16,
+          lineHeight: "20px",
+          color: theme.palette.grey[700],
+        },
+      },
     },
   };
 }

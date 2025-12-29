@@ -1,5 +1,5 @@
 // @types
-import type { Order } from "../types/order";
+import type { Order } from "@/types/order";
 
 export const rows: Order[] = [
   { id: "790955", name: "Joseph William", branch: "USA", payment: "Credit Card", date: "12 Nov, 2025", status: "Pending" },
